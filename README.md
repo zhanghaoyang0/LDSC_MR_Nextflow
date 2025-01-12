@@ -64,8 +64,11 @@ Download the data and reference genome (Bash):
 ```bash  
 wget -c https://zhanghaoyang0.uk/demo/ldsc/trait1.txt.gz -P data # T2D GWAS from Biobank Japan (filtered to HM3)
 wget -c https://zhanghaoyang0.uk/demo/ldsc/trait2.txt.gz -P data # Cataract GWAS from Biobank Japan (filtered to HM3)
-wget -c https://zhanghaoyang0.uk/db/1000g_bfile_hg19.tar.gz -P reference_genome
+wget -c https://zhanghaoyang0.uk/db/1000g_bfile_hg19.tar.gz -P reference_genome # bfile
+wget -c https://zhanghaoyang0.uk/db/1000g_ldscore_hg19.tar.gz -P reference_genome # ldscore
+wget -c https://zhanghaoyang0.uk/db/w_hm3.snplist -P reference_genome # snp list for munge
 tar -xvf reference_genome/1000g_bfile_hg19.tar.gz -C reference_genome
+tar -xvf reference_genome/1000g_ldscore_hg19.tar.gz -C reference_genome
 ```
 
 Set up `LDSC` conda environment (Bash):
@@ -141,7 +144,7 @@ GSMR,91,1.70e-01,1.44e-02,7.33e-32
 ```
 
 The corresponding plot `trait1_TO_trait2_MR_scatter.png` is like:
-![MR plot](trait1_TO_trait2_MR_scatter.png)
+![MR plot](result/trait1_TO_trait2_MR_scatter.png)
 
 # Feedback and comments
 Add an issue or send email to zhanghaoyang0@hotmail.com
