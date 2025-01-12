@@ -79,11 +79,11 @@ conda env create --file ldsc/environment.yml
 
 Set up `r421_mr` conda environment (Bash):
 ```bash
-mamba create -n r421_mr r-base=4.2.1 r-dplyr r-ggplot2 r-ggsci  r-survey -c conda-forge
+mamba create -n r421_mr r-base=4.2.1 r-dplyr r-ggplot2 r-ggsci  r-survey r-devtools -c conda-forge
 conda activate r421_mr
 ```
 
-Install two R packages in `r421_mr` (R):
+Install two R packages in `r421_mr` conda environment (R):
 ```r
 devtools::install_github("MRCIEU/TwoSampleMR")
 devtools::install_github("jianyanglab/gsmr2")
