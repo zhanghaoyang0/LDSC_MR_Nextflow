@@ -110,6 +110,12 @@ executor >  local (8)
 [2a/d47e0e] process > MR                 [100%] 1 of 1 ✔
 ```
 
+Results are pre-stored. If you want to rerun the workflow, you can delete the existing results and run it again:
+```
+rm munge/* clump/* result/* 
+nextflow run main.nf -with-conda
+```
+
 # Result
 The heritability results `trait1.log` and `trait2.log` are like:
 ```
