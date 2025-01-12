@@ -1,0 +1,47 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--out /home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait2 \
+--merge-alleles /home/ha0214zh/temp/LDSC_MR_Nextflow/reference_genome/w_hm3.snplist \
+--sumstats /home/ha0214zh/temp/LDSC_MR_Nextflow/data/trait2.txt.gz 
+
+Interpreting column names as follows:
+FRQ:	Allele frequency
+N:	Sample size
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+BETA:	[linear/logistic] regression coefficient (0 --> no effect; above 0 --> A1 is trait/risk increasing)
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+
+Reading list of SNPs for allele merge from /home/ha0214zh/temp/LDSC_MR_Nextflow/reference_genome/w_hm3.snplist
+Read 1217311 SNPs for allele merge.
+Reading sumstats from /home/ha0214zh/temp/LDSC_MR_Nextflow/data/trait2.txt.gz into memory 5000000 SNPs at a time.
+Read 1019576 SNPs from --sumstats file.
+Removed 0 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 77 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 5 variants that were not SNPs or were strand-ambiguous.
+1019494 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (1019494 SNPs remain).
+Removed 0 SNPs with N < 141635.333333 (1019494 SNPs remain).
+Median value of BETA was -4.61e-05, which seems sensible.
+Removed 1 SNPs whose alleles did not match --merge-alleles (1019493 SNPs remain).
+Writing summary statistics for 1217311 SNPs (1019493 with nonmissing beta) to /home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait2.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 1.082
+Lambda GC = 1.082
+Max chi^2 = 26.131
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Sun Jan 12 16:03:44 2025
+Total time elapsed: 29.73s

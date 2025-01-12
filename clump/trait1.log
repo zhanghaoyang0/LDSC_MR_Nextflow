@@ -1,0 +1,32 @@
+PLINK v1.90b6.18 64-bit (16 Jun 2020)
+Options in effect:
+  --allow-no-sex
+  --bfile /home/ha0214zh/temp/LDSC_MR_Nextflow/reference_genome/1000g_bfile_hg19/eas
+  --extract /home/ha0214zh/temp/LDSC_MR_Nextflow/clump/trait1.iv
+  --out /home/ha0214zh/temp/LDSC_MR_Nextflow/clump/trait1
+  --r2 square
+  --write-snplist
+
+Hostname: lap676
+Working directory: /home/ha0214zh/temp/LDSC_MR_Nextflow/work/bd/cb55d5063d84128959f738b0e8ea44
+Start time: Sun Jan 12 16:25:17 2025
+
+Random number seed: 1736695517
+16027 MB RAM detected; reserving 8013 MB for main workspace.
+Allocated 6009 MB successfully, after larger attempt(s) failed.
+8768561 variants loaded from .bim file.
+481 people (0 males, 0 females, 481 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/home/ha0214zh/temp/LDSC_MR_Nextflow/clump/trait1.nosex .
+--extract: 91 variants remaining.
+Using up to 4 threads (change this with --threads).
+Before main variant filters, 481 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+91 variants and 481 people pass filters and QC.
+Note: No phenotypes present.
+List of variant IDs written to
+/home/ha0214zh/temp/LDSC_MR_Nextflow/clump/trait1.snplist .
+--r2 square to /home/ha0214zh/temp/LDSC_MR_Nextflow/clump/trait1.ld ...
+done.
+
+End time: Sun Jan 12 16:25:20 2025

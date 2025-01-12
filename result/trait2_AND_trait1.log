@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--ref-ld-chr /home/ha0214zh/temp/LDSC_MR_Nextflow/reference_genome/1000g_ldscore_hg19/eas_ldscores/ \
+--out /home/ha0214zh/temp/LDSC_MR_Nextflow/result/trait2_AND_trait1 \
+--rg /home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait2.sumstats.gz,/home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait1.sumstats.gz \
+--w-ld-chr /home/ha0214zh/temp/LDSC_MR_Nextflow/reference_genome/1000g_ldscore_hg19/eas_ldscores/ 
+
+Beginning analysis at Sun Jan 12 16:17:46 2025
+Reading summary statistics from /home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait2.sumstats.gz ...
+Read summary statistics for 1019493 SNPs.
+Reading reference panel LD Score from /home/ha0214zh/temp/LDSC_MR_Nextflow/reference_genome/1000g_ldscore_hg19/eas_ldscores/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1208050 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /home/ha0214zh/temp/LDSC_MR_Nextflow/reference_genome/1000g_ldscore_hg19/eas_ldscores/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1208050 SNPs.
+After merging with reference panel LD, 1019476 SNPs remain.
+After merging with regression SNP LD, 1019476 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from /home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait1.sumstats.gz ...
+Read summary statistics for 1217311 SNPs.
+After merging with summary statistics, 1019476 SNPs remain.
+1019431 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0064 (0.0023)
+Lambda GC: 1.0802
+Mean Chi^2: 1.0824
+Intercept: 1.0532 (0.0081)
+Ratio: 0.6454 (0.0979)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0973 (0.0088)
+Lambda GC: 1.3443
+Mean Chi^2: 1.5112
+Intercept: 1.1209 (0.0253)
+Ratio: 0.2365 (0.0495)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0143 (0.0025)
+Mean z1*z2: 0.1518
+Intercept: 0.0918 (0.0066)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 0.5731 (0.1263)
+Z-score: 4.5377
+P: 5.6861e-06
+
+
+Summary of Genetic Correlation Results
+                                                            p1                                                             p2      rg      se       z           p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+ /home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait2.sumstats.gz  /home/ha0214zh/temp/LDSC_MR_Nextflow/munge/trait1.sumstats.gz  0.5731  0.1263  4.5377  5.6861e-06  0.0973     0.0088  1.1209     0.0253    0.0918       0.0066
+
+Analysis finished at Sun Jan 12 16:18:02 2025
+Total time elapsed: 16.23s

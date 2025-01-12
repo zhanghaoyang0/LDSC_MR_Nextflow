@@ -9,21 +9,25 @@ nextflow.enable.dsl=2
 workflow {
     def trait_channel = Channel.of(*params.traits)
     trait_channel.view { trait -> println("trait: ${trait}") }
-    def pair_channel = trait_channel.collect().map { traits -> [traits[0], traits[1]] }
+    // LDSC pipeline
+    MungeGWAS(trait_channel).set { munge_output }
+    Heritability(munge_output).set { h2_output }
+    def pair_channel = h2_output.collect().map { traits -> [traits[0], traits[1]] }
     pair_channel.view { pair -> println("pair: ${pair[0]} and ${pair[1]}") }
-    MungeGWAS(trait_channel)
-    Heritability(trait_channel)
     GeneticCorrelation(pair_channel)
-    Clump(pair_channel) 
-    LD_Matrix(pair_channel)
-    MR(pair_channel)
+    // MR pipeline
+    Clump(pair_channel).set { clump_output }
+    LD_Matrix(clump_output).set { ld_output }
+    MR(ld_output)
 }
 
 // Munge GWAS to hm3
 process MungeGWAS {
     input:
         val trait
-
+    output:
+        val trait
+    
     script:
     """
     if [ ! -f ${params.path_munge}${trait}.sumstats.gz ]; then
@@ -39,6 +43,8 @@ process MungeGWAS {
 // Heritability estimation via single-trait LDSC
 process Heritability {
     input:
+        val trait
+    output:
         val trait
 
     script:
@@ -58,6 +64,8 @@ process Heritability {
 process GeneticCorrelation {
     input:
         val pair
+    output:
+        val pair
 
     script:
     """
@@ -76,7 +84,9 @@ process GeneticCorrelation {
 process Clump {
     input:
         val pair
-
+    output:
+        val pair
+    
     script:
     """
     zcat ${params.path_gwas}${pair[0]}.txt.gz | awk 'NR==1 {print \$0} \$9<5e-8 {print \$0}' > ${params.path_clump}${pair[0]}.forClump
@@ -97,7 +107,9 @@ process Clump {
 process LD_Matrix {
     input:
         val pair
-
+    output:
+        val pair
+    
     script:
     """
     if [ ! -f ${params.path_clump}${pair[0]}.ld ]; then
@@ -114,7 +126,9 @@ process LD_Matrix {
  process MR {
     input:
         val pair
-
+    output:
+        val pair
+    
     script:
     """
     conda run -n r421_mr bash -c "Rscript ${baseDir}/MR.r \
