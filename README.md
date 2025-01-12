@@ -45,6 +45,7 @@ Structure tree:
 ├── main.nf
 ├── MR.r
 ├── munge/                 # Munged GWAS data
+├── clump/                 # LD Clump result
 ├── nextflow.config
 ├── README.md
 └── result/                # Output results for heritability, correlation, and causality
