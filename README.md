@@ -1,7 +1,9 @@
 
 
 # LDSC_MR_Nextflow
-This repository contains a NextFlow pipeline for performing heritability estimation, genetic correlation, and genetic causality analysis using GWAS data. It provide main result of this [Paper](https://pubmed.ncbi.nlm.nih.gov/34999863/). More details of each module can be found at [here](https://zhanghaoyang0.uk/#ldsc).
+This repository contains a NextFlow pipeline for performing heritability estimation, genetic correlation, and genetic causality analysis using GWAS data. 
+
+It provides main result of this [Paper](https://pubmed.ncbi.nlm.nih.gov/34999863/). More details of each module can be found at [here](https://zhanghaoyang0.uk/#ldsc).
 
 ---
 # Dependencies 
