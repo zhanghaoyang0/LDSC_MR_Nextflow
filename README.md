@@ -147,4 +147,4 @@ The corresponding plot `trait1_TO_trait2_MR_scatter.png` is like:
 ![MR plot](result/trait1_TO_trait2_MR_scatter.png)
 
 # Feedback and comments
-Add an issue or send email to zhanghaoyang0@hotmail.com
+Find me via zhanghaoyang0@hotmail.com
