@@ -141,7 +141,7 @@ GSMR,91,1.70e-01,1.44e-02,7.33e-32
 ```
 
 The corresponding plot `trait1_TO_trait2_MR_scatter.png` is like:
-![MR plot](result/trait1_TO_trait2_MR_scatter.png)
+![MR plot](trait1_TO_trait2_MR_scatter.png)
 
 # Feedback and comments
 Add an issue or send email to zhanghaoyang0@hotmail.com
