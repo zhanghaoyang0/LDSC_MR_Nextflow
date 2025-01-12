@@ -60,7 +60,7 @@ git clone https://github.com/zhanghaoyang0/MR_LDSC_Nextflow.git
 cd MR_LDSC_Nextflow
 ```
 
-Download the data and reference genome:
+Download the data and reference genome (Bash):
 ```bash  
 wget -c https://zhanghaoyang0.uk/demo/ldsc/trait1.txt.gz -P data # T2D GWAS from Biobank Japan (filtered to HM3)
 wget -c https://zhanghaoyang0.uk/demo/ldsc/trait2.txt.gz -P data # Cataract GWAS from Biobank Japan (filtered to HM3)
@@ -68,26 +68,26 @@ wget -c https://zhanghaoyang0.uk/db/1000g_bfile_hg19.tar.gz -P reference_genome
 tar -xvf reference_genome/1000g_bfile_hg19.tar.gz -C reference_genome
 ```
 
-Set up `LDSC` conda environment:
+Set up `LDSC` conda environment (Bash):
 ```bash
 git clone https://github.com/bulik/ldsc.git
 conda env create --file ldsc/environment.yml
 ```
 
-Set up `r421_mr` conda environment:
+Set up `r421_mr` conda environment (Bash):
 ```bash
 mamba create -n r421_mr r-base=4.2.1 r-dplyr r-ggplot2 r-ggsci  r-survey -c conda-forge
 conda activate r421_mr
 ```
 
-Install two R packages in `r421_mr`:
+Install two R packages in `r421_mr` (R):
 ```r
 devtools::install_github("MRCIEU/TwoSampleMR")
 devtools::install_github("jianyanglab/gsmr2")
 ```
 
 # Getting Started
-Run `main.nf`:
+Run `main.nf` (Bash):
 ```bash
 nextflow run main.nf -with-conda
 ```
