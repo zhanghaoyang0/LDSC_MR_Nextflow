@@ -56,8 +56,8 @@ Structure tree:
 # Getting Started
 Clone this repository via the commands:
 ```  
-git clone https://github.com/zhanghaoyang0/MR_LDSC_Nextflow.git
-cd MR_LDSC_Nextflow
+git clone https://github.com/zhanghaoyang0/LDSC_MR_Nextflow.git
+cd LDSC_MR_Nextflow
 ```
 
 Download the data and reference genome (Bash):
