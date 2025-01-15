@@ -1,7 +1,5 @@
 #!/usr/bin/env nextflow
 
-// Simple Nextflow Script for Testing
-// File: main.nf
 
 nextflow.enable.dsl=2
 
