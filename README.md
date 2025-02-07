@@ -62,8 +62,8 @@ cd LDSC_MR_Nextflow
 
 Download the data and reference genome (Bash):
 ```bash  
-wget -c https://zhanghaoyang0.uk/demo/ldsc/trait1.txt.gz -P data # T2D GWAS from Biobank Japan (filtered to HM3)
-wget -c https://zhanghaoyang0.uk/demo/ldsc/trait2.txt.gz -P data # Cataract GWAS from Biobank Japan (filtered to HM3)
+wget -c https://zhanghaoyang0.uk/note/ldsc/trait1.txt.gz -P data # T2D GWAS from Biobank Japan (filtered to HM3)
+wget -c https://zhanghaoyang0.uk/note/ldsc/trait2.txt.gz -P data # Cataract GWAS from Biobank Japan (filtered to HM3)
 wget -c https://zhanghaoyang0.uk/db/1000g_bfile_hg19.tar.gz -P reference_genome # bfile
 wget -c https://zhanghaoyang0.uk/db/1000g_ldscore_hg19.tar.gz -P reference_genome # ldscore
 wget -c https://zhanghaoyang0.uk/db/w_hm3.snplist -P reference_genome # snp list for munge
